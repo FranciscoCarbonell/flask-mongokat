@@ -1,5 +1,6 @@
 from flask_mongokat import MongokatDocument,MongokatCollection,MongokatApp
 from flask import Flask,jsonify
+
 class User(MongokatDocument):
     def get_name(self):
         return self["name"]
@@ -17,6 +18,15 @@ class UserCollection(MongokatCollection):
 
 app = Flask(__name__)
 app.config.from_object('config.Developement')
+
+'''
+config.py
+class Developement:
+    DEBUG = True
+    #MONGOKATDB = 'mydb'
+    #MONGOKATHOST = 'myhost'
+    #MONGOKATPORT = 8898
+'''
 mongo = MongokatApp(app)
 @app.route('/')
 def index():
