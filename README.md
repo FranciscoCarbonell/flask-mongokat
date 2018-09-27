@@ -7,6 +7,11 @@ mongokat extension from flask
 * mongokat
 * flask
 
+**test**
+* python version
+    * python 2.7.9
+    * python 3.6.4
+
 
 **exmaple:**
 
